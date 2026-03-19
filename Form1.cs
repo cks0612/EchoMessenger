@@ -19,6 +19,7 @@ namespace EchoMessenger
             string typed_msg;
             typed_msg = txtbx.Text;
             lstbx.Items.Add(typed_msg);
+
         }
     }
 }
