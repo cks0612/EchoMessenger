@@ -48,18 +48,19 @@ namespace EchoMessenger
 
             typed_msg = txtbx.Text.Trim(); ;
 
-            string timeStamp = DateTime.Now.ToString("[HH:mm:ss]");
-            string message = timeStamp + " " + typed_msg;
+        
 
             if (e.KeyCode == Keys.Enter)
             {
+                string timeStamp = DateTime.Now.ToString("[HH:mm:ss]");
+                string message = timeStamp + " " + typed_msg;
 
                 if (string.IsNullOrWhiteSpace(typed_msg))
                 {
                     return;
                 }
 
-                lstbx.Items.Add(typed_msg);
+                lstbx.Items.Add(message);
 
                 txtbx.Clear();
 
