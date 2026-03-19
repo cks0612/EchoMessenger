@@ -18,7 +18,10 @@ namespace EchoMessenger
         {
             string typed_msg;
 
-            typed_msg = txtbx.Text;
+            typed_msg = txtbx.Text.Trim(); ;
+
+            string timeStamp = DateTime.Now.ToString("[HH:mm:ss]");
+            string message = timeStamp + " " + typed_msg;
 
 
             if (string.IsNullOrWhiteSpace(typed_msg))
@@ -43,10 +46,13 @@ namespace EchoMessenger
         {
             string typed_msg;
 
+            typed_msg = txtbx.Text.Trim(); ;
+
+            string timeStamp = DateTime.Now.ToString("[HH:mm:ss]");
+            string message = timeStamp + " " + typed_msg;
+
             if (e.KeyCode == Keys.Enter)
             {
-                typed_msg = txtbx.Text;
-
 
                 if (string.IsNullOrWhiteSpace(typed_msg))
                 {
@@ -60,6 +66,11 @@ namespace EchoMessenger
                 txtbx.Focus();
 
             }
+        }
+
+        private void dks(object sender, EventArgs e)
+        {
+
         }
     }
 }

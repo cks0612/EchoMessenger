@@ -71,6 +71,7 @@
             txtbx.Name = "txtbx";
             txtbx.Size = new Size(500, 23);
             txtbx.TabIndex = 3;
+            txtbx.TextChanged += dks;
             txtbx.KeyDown += txtbx_KeyDown;
             // 
             // Form1
