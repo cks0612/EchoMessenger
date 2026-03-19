@@ -17,9 +17,49 @@ namespace EchoMessenger
         private void btn_Click(object sender, EventArgs e)
         {
             string typed_msg;
+
             typed_msg = txtbx.Text;
+
+
+            if (string.IsNullOrWhiteSpace(typed_msg))
+            {
+                return;
+            }
+
             lstbx.Items.Add(typed_msg);
 
+            txtbx.Clear();
+
+            txtbx.Focus();
+
+        }
+
+        private void btn_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtbx_KeyDown(object sender, KeyEventArgs e)
+        {
+            string typed_msg;
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                typed_msg = txtbx.Text;
+
+
+                if (string.IsNullOrWhiteSpace(typed_msg))
+                {
+                    return;
+                }
+
+                lstbx.Items.Add(typed_msg);
+
+                txtbx.Clear();
+
+                txtbx.Focus();
+
+            }
         }
     }
 }

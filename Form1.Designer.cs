@@ -67,11 +67,11 @@
             // 
             // txtbx
             // 
-            txtbx.Location = new Point(30, 351);
-            txtbx.Multiline = true;
+            txtbx.Location = new Point(30, 363);
             txtbx.Name = "txtbx";
-            txtbx.Size = new Size(500, 45);
+            txtbx.Size = new Size(500, 23);
             txtbx.TabIndex = 3;
+            txtbx.KeyDown += txtbx_KeyDown;
             // 
             // Form1
             // 
